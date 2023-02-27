@@ -1,0 +1,68 @@
+.reminder {
+  position: fixed;
+  content: "";
+  left: -80px;
+  bottom: 0;
+  width: calc(100% + 160px);
+  background-color: var(--color-background-white);
+  box-shadow: 0 0 2px 2px var(--color-background-gray);
+}
+
+.reminder.hidden {
+  top: 100%;
+}
+
+.toggle {
+  position: absolute;
+  content: "";
+  inset: -32px 0 auto 0;
+  margin: auto;
+  width: 128px;
+  height: 32px;
+  border-radius: 8px 8px 0 0;
+  background-color: hsl(165, 17%, 95%);
+  cursor: pointer;
+}
+
+.toggle::before {
+  position: absolute;
+  content: "";
+  inset: auto 0 12px 0;
+  margin: auto;
+  width: 18px;
+  height: 18px;
+  border-top: 4px solid var(--color-main);
+  border-right: 4px solid var(--color-main);
+  transform: rotate(135deg);
+}
+
+.reminder.hidden .toggle::before {
+  inset: 12px 0 auto 0;
+  transform: rotate(-45deg);
+}
+
+.content {
+  display: flex;
+  gap: 10%;
+  justify-content: center;
+  margin: 36px;
+}
+
+.talkThemeContentArea {
+  display: flex;
+  column-gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+.talkThemeContent {
+  display: grid;
+  place-items: center;
+  color: var(--color-background-white);
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 180px;
+  height: 120px;
+  background-color: var(--color-main);
+  border-radius: 8px;
+}

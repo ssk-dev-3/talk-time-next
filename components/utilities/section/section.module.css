@@ -1,0 +1,59 @@
+.section {
+  position: relative;
+  margin: 80px 80px;
+}
+
+.headingArea {
+  margin-bottom: 32px;
+}
+
+.heading {
+  color: var(--color-main);
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.subheading {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 700;
+}
+
+.description {
+  margin-bottom: 64px;
+}
+
+.content {
+  margin-bottom: 64px;
+}
+
+.contentItem:not(:last-child) {
+  margin-bottom: 64px;
+}
+
+.topic {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  padding-left: 8px;
+  border-left: 6px solid var(--color-main);
+  margin-bottom: 24px;
+}
+
+.nextButton {
+  display: block;
+  color: var(--color-background-white);
+  font-weight: 700;
+  margin: 0 auto;
+  padding: .5rem 4rem;
+  background-color: var(--color-main);
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  opacity: 1;
+  transition: all .2s ease;
+}
+
+.nextButton:hover {
+  opacity: .8;
+}

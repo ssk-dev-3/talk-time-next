@@ -1,0 +1,184 @@
+.topWrapper {
+  position: relative;
+  background-color: var(--color-background-white);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 7.5rem;
+  justify-content: center;
+  align-items: center;
+  width: 56%;
+  height: 100vh;
+  background-color: var(--color-main);
+}
+
+.titleArea {
+  text-align: center;
+}
+
+.title {
+  color: var(--color-background-white);
+  font-size: clamp(3.5rem, 7vw, 7.5rem);
+  font-family: 'Roboto';
+  letter-spacing: 0.2rem;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  position: relative;
+  color: var(--color-background-white);
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-family: 'Noto Sans JP';
+}
+
+.startButton {
+  color: var(--color-main);
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  font-weight: bold;
+  background-color: var(--color-background-white);
+  padding: 0.5em 4em;
+  border: none;
+  border-radius: 55px;
+  cursor: pointer;
+  opacity: 1;
+  transition: all .2s ease;
+}
+
+.startButton:hover {
+  opacity: .9;
+}
+
+.animationArea {
+  position: absolute;
+  content: "";
+  width: 44%;
+  height: 100vh;
+  top: 0;
+  right:0;
+}
+
+.balloons {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  right: 0;
+}
+
+.speakerBalloon,
+.listenerBalloon {
+  position: absolute;
+  bottom: 280px;
+  height: 20%;
+  border-radius: 50%;
+  opacity: 01
+}
+
+.speakerBalloon {
+  right:140px;
+  width: 60%;
+  background-color: #42ce9f;
+  transform-origin: top left;
+  /* animation: speakerBalloonAppear 5s ease-in-out 0s infinite; */
+}
+
+@keyframes speakerBalloonAppear {
+  10%{
+    transform: rotate(10deg);
+    bottom: 200px;
+    right: 140px;
+    opacity: 0;
+  }
+  30% {
+    transform: rotate(0);
+    bottom: 280px;
+    right: 160px;
+    opacity: 1;
+  }
+  90% {
+    transform: rotate(0);
+    bottom: 280px;
+    right: 160px;
+    opacity: 0;
+  }
+}
+
+.listenerBalloon {
+  right: 120px;
+  width: 55%;
+  background-color: #c5cfd6;
+  transform-origin: top right;
+  /* animation: listenerBalloonAppear 5s ease-in-out 2.5s infinite; */
+}
+
+@keyframes listenerBalloonAppear {
+  10%{
+    transform: rotate(-10deg);
+    bottom: 200px;
+    right: 120px;
+    opacity: 0;
+  }
+  30% {
+    transform: rotate(0);
+    bottom: 280px;
+    right: 128px;
+    opacity: 1;
+  }
+  90% {
+    transform: rotate(0);
+    bottom: 280px;
+    right: 128px;
+    opacity: 0;
+  }
+}
+
+.speakerBalloon::before,
+.listenerBalloon::before {
+  position: absolute;
+  content: "";
+  bottom: -9px;
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+}
+
+.speakerBalloon::before {
+  left: 10%;
+  border-right: 40px solid transparent;
+  border-left: 40px solid #42ce9f;
+  transform: rotate(16deg);
+}
+
+.listenerBalloon::before {
+  right: 10%;
+  border-right: 40px solid #c5cfd6;
+  border-left: 40px solid transparent;
+  transform: rotate(-16deg);
+}
+
+.humanArea {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.speaker {
+  position: absolute;
+  content: "";
+  right: calc(64% + 16px);
+  bottom: 0;
+}
+
+.listener {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  right: 16px;
+  transform: rotateY(180deg);
+}

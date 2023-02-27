@@ -1,0 +1,88 @@
+.categoryTab {
+  display: flex;
+  justify-content: flex-between;
+}
+
+.category {
+  font-weight: 700;
+  width: 180px;
+  background-color: var(--color-background-gray);
+  border: 2px solid var(--color-main);
+  border-right: none;
+}
+
+.category:first-child {
+  border-top-left-radius: 8px;
+}
+
+.category:last-child {
+  border-right: 2px solid var(--color-main);
+  border-top-right-radius: 8px;
+}
+
+.category:has(input[type="radio"]:checked),
+.theme:has(input[type="radio"]:checked),
+.emotion:has(input[type="radio"]:checked) {
+  background-color: var(--color-main);
+}
+
+.category > input[type="radio"],
+.theme > input[type="radio"],
+.emotion > input[type="radio"] {
+  display: none;
+}
+
+.category > label,
+.theme > label,
+.emotion > label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-text-gray);
+  font-weight: 700;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.category > label {
+  padding: 8px;
+}
+
+.category:has(input[type="radio"]:checked) > label,
+.theme:has(input[type="radio"]:checked) > label,
+.emotion:has(input[type="radio"]:checked) > label {
+  color: var(--color-background-white);
+}
+
+.themeList,
+.emotionBoard {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(auto-fill, 180px);
+  place-content: center;
+  padding: 32px;
+  background-color: var(--color-background-gray);
+  border-radius: 8px;
+}
+
+.themeList {
+  border-top-left-radius: 0;
+}
+
+.theme,
+.emotion {
+  display: grid;
+  place-items: center;
+  width: 180px;
+  height: 120px;
+  border-radius: 8px;
+  background-color: var(--color-background-white);
+}
+
+.theme > label,
+.emotion > label {
+  font-size: 1.5rem;
+  border-radius: inherit;
+}
+

@@ -1,0 +1,6 @@
+.bounceBoard {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(auto-fill, 267px);
+  place-content: center;
+}
