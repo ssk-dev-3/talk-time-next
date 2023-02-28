@@ -32,7 +32,7 @@
 }
 
 .topic {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.2;
   padding-left: 8px;
@@ -43,6 +43,7 @@
 .nextButton {
   display: block;
   color: var(--color-background-white);
+  font-size: 1.2rem;
   font-weight: 700;
   margin: 0 auto;
   padding: .5rem 4rem;

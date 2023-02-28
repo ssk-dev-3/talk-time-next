@@ -1,6 +1,7 @@
 .cardBoard {
   display: grid;
   gap: 32px;
-  grid-template-columns: repeat(auto-fill, 267px);
-  place-content: center;
+  grid-template-columns: repeat(auto-fill, 360px);
+  place-items: center;
+  max-width: 1520px;
 }
